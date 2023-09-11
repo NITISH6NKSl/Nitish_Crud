@@ -7,7 +7,7 @@ import RowInput from "./RowInput";
 import { SearchBox } from "@fluentui/react-search-preview";
 
 import { makeStyles, Button, } from "@fluentui/react-components";
-import { Add24Regular } from "@fluentui/react-icons"
+import { Add24Regular } from "@fluentui/react-icons";
 
 import {
   TableBody,
