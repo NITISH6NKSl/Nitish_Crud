@@ -25,7 +25,7 @@ const RowShow=({index,data,DeleteData,AccesToken,url})=>{
      
       console.log(`${url}/${data.id},${list}`)
       try {
-        console.log("In updte f/n");
+        
         console.log(data);
         await axios
         .patch(`${url}/${data.id}/fields`, 
