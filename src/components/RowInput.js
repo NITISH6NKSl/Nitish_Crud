@@ -1,4 +1,4 @@
-import { TableCell ,Button,Dropdown,Option,makeStyles,Input} from "@fluentui/react-components";
+import { TableCell ,Button,Dropdown,Option,makeStyles,Input, Label} from "@fluentui/react-components";
 import { PersonRegular } from "@fluentui/react-icons";
 import { DatePicker } from "@fluentui/react-datepicker-compat";
 
@@ -34,9 +34,9 @@ const styles = useStyles();
            
     //         }
     return(<>
-        <TableCell><Input type="text" className={styles.control} onChange={(e)=>setName(e.target.value)}    size="small" value={name} /></TableCell>
+        <TableCell><Input type="text"  className={styles.control} onChange={(e)=>setName(e.target.value)}    size="small" value={name}  placeholder="Enter Name"/></TableCell>
         
-        <TableCell><Input type="number" onChange={(e)=>setSalary(e.target.value)} value={salary}/></TableCell>
+        <TableCell><Input type="number" onChange={(e)=>setSalary(e.target.value)} value={salary} placeholder="Enter salary"/></TableCell>
         <TableCell>  <DatePicker  defaultValue={props?.data?.JoiningDate} size="small" onSelectDate={(date)=>{
             setDate(date)}}
         className={styles.control}
@@ -45,7 +45,8 @@ const styles = useStyles();
       />
       </TableCell>
         <TableCell>
-        <Dropdown className={styles.control} size="small" defaultValue={props?.data?.IsActive} onOptionSelect={(event,data)=>{setIsActive(data.optionValue)}} >
+        <Label htmlFor="avilable"></Label>
+        <Dropdown  className={styles.control} size="small" defaultValue={props?.data?.IsActive} onOptionSelect={(event,data)=>{setIsActive(data.optionValue)}} >
             <Option   value={true}>Yes</Option>
             <Option  value={false}>No</Option>
             </Dropdown>
