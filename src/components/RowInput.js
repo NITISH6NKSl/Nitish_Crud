@@ -11,10 +11,10 @@ const useStyles = makeStyles({
 const RowInput=(props)=>{
 const [name,setName]=useState(props?.data?.Name);
 const [salary,setSalary]=useState(props?.data?.Salary);
-const [department,setDepartment]=useState(props?.data?.JoiningDate);
+const [department,setDepartment]=useState(props?.data?.Department);
 const [isActive,setIsActive]=useState(props?.data?.IsActive)
-const [joining,setJoining]=useState('');
-
+const [joining,setJoining]=useState(props?.data?.JoiningDate);
+console.log("All previous data value",name,salary,joining,isActive,)
 const setDate=(str)=>{
   var date=new Date(str);
   var mon=date.getMonth();
@@ -23,6 +23,7 @@ const setDate=(str)=>{
   var joinigDateIs=[day,mon,year].join["/"]
   console.log("date is ",joinigDateIs);
   setJoining(joinigDateIs)
+  console.log(joinigDateIs)
 
 }
 const styles = useStyles();
